@@ -15,4 +15,4 @@ sat的价值需要在流通中不断被认知并凝聚。但是，BTC主网的�
 
 - [GitHub](https://github.com/OLProtocol/)
 - [Twitter](https://x.com/OLDProtocol/)
-- [Mainnet Block Explorer](https://ordinalslightning.xyz)
+- [官网](https://ordinalslightning.xyz)
