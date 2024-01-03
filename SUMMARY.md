@@ -1,11 +1,17 @@
 # Table of contents
 
-* [Page 1](introduction.md)
-  * [Page 3](page-1/page-3/README.md)
-    * [Page 4](page-1/page-3/page-4.md)
-* [Page 2](page-2/README.md)
-  * [Page 5](page-2/page-5.md)
-  * [Page 6](page-2/page-6.md)
-* [Page](page/README.md)
-  * [Page 7](page/page-7.md)
-  * [Page 8](page/page-8.md)
+* [介绍](introduction/README.md)
+  * [目标](introduction/goal.md)
+  * [规划](introduction/roadmap.md)
+* [OrdX]
+  * [概述](ordx/README.md)
+  * [指令](ordx/instruct.md)
+  * [客户端验证](ordx/appverify.md)
+  * [粉尘攻击](ordx/dust.md)
+  * [重复铭刻](ordx/multiscribe.md)
+  * [使用场景](ordx/usecase.md)
+* [OLDEX]
+  * [概述](oldex/README.md)
+  * [闪电网络](oldex/lightning.md)
+  * [业务流程](oldex/workflow.md)
+
