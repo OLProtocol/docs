@@ -1,17 +1,17 @@
 # Table of contents
 
-* [介绍]
+* 介绍
   * [概述](introduction/README.md)
   * [目标](introduction/goal.md)
   * [规划](introduction/roadmap.md)
-* [OrdX]
+* OrdX
   * [概述](ordx/README.md)
   * [指令](ordx/instruct.md)
   * [客户端验证](ordx/appverify.md)
   * [粉尘攻击](ordx/dust.md)
   * [重复铭刻](ordx/multiscribe.md)
   * [使用场景](ordx/usecase.md)
-* [OLDEX]
+* OLDEX
   * [概述](oldex/README.md)
   * [闪电网络](oldex/lightning.md)
   * [业务流程](oldex/workflow.md)
