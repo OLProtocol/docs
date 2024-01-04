@@ -3,6 +3,7 @@
 * OLD协议
   * [概述](introduction/introduction.md)
   * [目标](introduction/goal.md)
+  * [背景](introduction/background.md)
   * [规划](introduction/roadmap.md)
 * OrdinalsX
   * [概述](ordx/README.md)
