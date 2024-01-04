@@ -14,6 +14,6 @@ One sat, one universe.
 ----
 1. 让sat绑定更多的数据和资产，提升sat的价值。
 2. 不会有烧毁token的可能。token跟sat绑定，sat在，token就在。
-3. 为ordinals资产的经济快速交易做准备。
+3. 为ordinals资产的经济快捷交易做准备。
 4. 客户端验证。不需要依赖indexer，wallet可以直接在链上验证资产（只需要依赖区块链浏览器的通用接口就可以验证）。
 

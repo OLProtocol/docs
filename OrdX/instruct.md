@@ -32,7 +32,7 @@ deploy
   "lim": "10000"  
 }  
   
-在普通情况下，OrdinalsX跟BRC-20协议类似，通过铭刻deploy指令来部署token。不同的是没有供应量的限制，而是指定mint的有效区块高度。在这个高度之内mint的所有token都有效。另外一个不同的地方，deploy时可以声明具备特殊属性的sat才能mint：reg和rarity是用来对sat的属性做规定的。可以发现，OrdinalsX协议除了用于发行普通的token之外，还可能发行特殊的token，仅有特殊的sat才能mint出来。这个特性是为了挖掘sat的独特价值。
+在普通情况下，OrdinalsX跟BRC-20协议类似，通过铭刻deploy指令来部署token。不同的是没有供应量的限制，而是指定mint的有效区块高度。在这个高度之内mint的所有token都有效。另外一个不同的地方，deploy时可以声明具备特殊属性的sat才能mint：reg和rarity是用来对sat的属性做规定的。可以发现，OrdinalsX协议除了用于发行普通的token之外，还能发行特殊的token，仅有特殊的sat才能mint出来。这个特性是为了挖掘sat的独特价值。
 
 
 mint
