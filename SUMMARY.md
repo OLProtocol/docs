@@ -1,17 +1,17 @@
 # Table of contents
 
-* [OLD Protocol](README.md)
-  * [概述](old-protocol/introduction.md)
-  * [目标](old-protocol/goal.md)
-  * [规划](old-protocol/roadmap.md)
-* [OrdX](ordx/README.md)
-  * [概述](ordx/gai-shu.md)
-  * [指令](ordx/zhi-ling.md)
-  * [客户端验证](ordx/ke-hu-duan-yan-zheng.md)
-  * [粉尘攻击](ordx/fen-chen-gong-ji.md)
-  * [重复铭刻](ordx/zhong-fu-ming-ke.md)
-  * [使用场景](ordx/shi-yong-chang-jing.md)
-* [OLDEX](<oldex/README (1).md>)
+* OLD协议
+  * [概述](introduction/introduction.md)
+  * [目标](introduction/goal.md)
+  * [规划](introduction/roadmap.md)
+* OrdinalsX
+  * [概述](ordx/README.md)
+  * [指令](ordx/instruct.md)
+  * [客户端验证](ordx/appverify.md)
+  * [粉尘攻击](ordx/dust.md)
+  * [重复铭刻](ordx/multiscribe.md)
+  * [使用场景](ordx/usecase.md)
+* OLDEX
   * [概述](oldex/README.md)
   * [闪电网络](oldex/lightning.md)
   * [业务流程](oldex/workflow.md)
