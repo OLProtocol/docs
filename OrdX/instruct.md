@@ -12,7 +12,7 @@ deploy
 ----
 
 | KEY   | Required | Description   |
-| :------- | :------: | -------: |
+| :-------: | :------: | :------- |
 | p	| Yes | 协议名称: ordx |
 | op | Yes | 指令: deploy, mint |
 | tick | Yes | 名称: 只允许3或5-16个字符，（为brc-20保留4个字符） |
@@ -23,7 +23,7 @@ deploy
 | des | No | 描述内容 |
 
 
-例如：
+例如：  
 {   
   "p": "ordx",  
   "op": "deploy",  
@@ -39,19 +39,29 @@ mint
 ----
 
 | KEY   | Required | Description   |
-| :------- | :------: | -------: |
+| :-------: | :------: | :------- |
 | p	| Yes | 协议名称: ordx |
 | op | Yes | 指令: deploy, mint |
 | tick | Yes | 名称: 只允许3或5-16个字符，（为brc-20保留4个字符） |
 | amt | Yes | mint得到的token的数量，不能超过deploy时指定的lim |
 | sat | Yes | 指定sat的序号 |
 
+例如：  
+{ 
+  "p": "ordx",  
+  "op": "mint",  
+  "tick": "satoshi",  
+  "amt": "10000",  
+  "sat": "1234567890"  
+}
+
+
 mint时，需要根据deploy声明的规则做检查：检查当前utxo中的sat，看看是否满足规则:  
 1. sat：指定这次mint应该从哪个sat开始，该sat后面需要有amt个连续序号的sat，才能mint成功。
 2. deploy的规则”block“：该次mint的block高度是否在deploy的规定之内。
 3. deploy的规则”lim“：该次mint的amt小于等于lim。
 4. deploy的规则”reg“：如果有设置，需要检查该sat的序号是否符合正则表达式reg。
-5. deploy的规则”rarity“：如果有设置，检查该sat是否是这种类型。这种类型只允许amt为1.
+5. deploy的规则”rarity“：如果有设置，检查该sat是否是这种类型。这种类型只允许amt为1。
 如果不满足以上规则，就不允许mint。即使使用工具强行mint，钱包也可以自主检查是否满足deploy的规则自行验证。  
 
 

@@ -6,7 +6,7 @@ OrdinalsX是一个增强的Ordinals协议，支持使用Ordinals协议发行fung
 
 愿景
 ----
-一聪一世界。
+一聪一世界。  
 One sat, one universe.
 
 

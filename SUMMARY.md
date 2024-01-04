@@ -9,7 +9,7 @@
   * [概述](OrdX/README.md)
   * [指令](OrdX/instruct.md)
   * [客户端验证](OrdX/appverify.md)
-  * [粉尘攻击](OrdX/dust.md)
+  * [粉尘问题](OrdX/dust.md)
   * [重复铭刻](OrdX/multiscribe.md)
   * [使用场景](OrdX/usecase.md)
 * OLDEX
