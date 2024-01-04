@@ -1,6 +1,6 @@
 # Table of contents
 
-* OLD协议
+* OLD Protocol
   * [概述](introduction/introduction.md)
   * [目标](introduction/goal.md)
   * [背景](introduction/background.md)
