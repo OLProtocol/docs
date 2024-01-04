@@ -11,8 +11,8 @@ OrdinalsX协议只有deploy和mint指令，不需要transfer指令。基本原�
 deploy
 ----
 
-| KEY   | Required | Description   |
-| :-------: | :------: | :------- |
+| KEY | Required | Description |
+| :---: | :---: | :------- |
 | p	| Yes | 协议名称: ordx |
 | op | Yes | 指令: deploy, mint |
 | tick | Yes | 名称: 只允许3或5-16个字符，（为brc-20保留4个字符） |
@@ -38,8 +38,8 @@ deploy
 mint
 ----
 
-| KEY   | Required | Description   |
-| :-------: | :------: | :------- |
+| KEY | Required | Description |
+| :---: | :---: | :------- |
 | p	| Yes | 协议名称: ordx |
 | op | Yes | 指令: deploy, mint |
 | tick | Yes | 名称: 只允许3或5-16个字符，（为brc-20保留4个字符） |
