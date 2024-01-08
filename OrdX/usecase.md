@@ -53,7 +53,7 @@ Casey的蓝宝石
   "rar": "epic",  
   "des": "Casey's Sapphire."  
 }  
-只有epic属性的sat才能mint成蓝宝石，最多只有32个红宝石。目前只有3个，预计每个值10000BTC。
+只有epic属性的sat才能mint成蓝宝石，最多只有32个蓝宝石。目前只有3个，预计每个值10000BTC。
 
 
 数字黄金
