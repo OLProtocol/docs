@@ -68,4 +68,4 @@ mint时，需要根据deploy声明的规则做检查：检查当前utxo中的sat
 
 upgrade
 ----
-将其他协议的FT升级到OrdinalsX，只能单向升级。以后扩展。
+将其他协议的FT升级到OrdinalsX，主要支持brc-20。以后扩展。
