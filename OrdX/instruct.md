@@ -17,7 +17,7 @@ deploy
 | op | Yes | 指令: deploy, mint |
 | tick | Yes | 名称: 只允许3或5-16个字符，（为brc-20保留4个字符） |
 | lim | No | 每次mint的限额，默认是1 |
-| block | No | 没有总量限制，但是有mint的开始高度和结束高度（开始-结束）。默认是从部署成功开始就可以mint，没有结束。（其他条件限制了mint的可能性）|
+| block | No | 没有总量限制，但是有mint的开始高度和结束高度（开始-结束）。（block高度范围和sat属性，必须至少选一项）|
 | reg | No | 要求该sat的序号满足一定的规则（正则表达式），默认是不设置。比如表示尾部有n个零：^[1-9][0-9]*0{n}$ |
 | rar | No | Sat的稀缺度, 默认是不指定。稀缺度属性：common，uncommon，rare，epic，legendary, mythic。 |
 | des | No | 描述内容 |
@@ -43,25 +43,23 @@ mint
 | p	| Yes | 协议名称: ordx |
 | op | Yes | 指令: deploy, mint |
 | tick | Yes | 名称: 只允许3或5-16个字符，（为brc-20保留4个字符） |
-| amt | Yes | mint得到的token的数量，不能超过deploy时指定的lim |
-| sat | Yes | 指定sat的序号 |
+| amt | No | mint得到的token的数量，默认等于lim，不能超过lim |
+| sat | No | 指定sat的序号，只有要求在特殊的sat上mint才需要设置。默认是从utxo的第一个sat开始。 |
 
 例如：  
 { 
   "p": "ordx",  
   "op": "mint",  
-  "tick": "satoshi",  
-  "amt": "10000",  
-  "sat": "1234567890"  
+  "tick": "satoshi"  
 }
 
 
 mint时，需要根据deploy声明的规则做检查：检查当前utxo中的sat，看看是否满足规则:  
-1. sat：指定这次mint应该从哪个sat开始，该sat后面需要有足够的sat（amt-1），才能mint成功。
-2. deploy的规则”block“：该次mint的block高度是否在deploy的规定之内。
-3. deploy的规则”lim“：该次mint的amt小于等于lim。
+1. sat：如果有设置，指定这次mint应该从哪个sat开始，该sat后面需要有足够的sat（amt-1），才能mint成功。
+2. deploy的规则”lim“：该次mint的amt小于等于lim。
+3. deploy的规则”block“：如果有设置，该次mint的block高度需要在deploy的规定之内。
 4. deploy的规则”reg“：如果有设置，需要检查该sat的序号是否符合正则表达式reg。
-5. deploy的规则”rar“：如果有设置，检查该sat是否是这种类型。这种类型只允许amt为1。
+5. deploy的规则”rar“：如果有设置，检查该sat是否是这种类型。
 如果不满足以上规则，就不允许mint。即使使用工具强行mint，钱包也可以自主检查是否满足deploy的规则自行验证。  
 
 
