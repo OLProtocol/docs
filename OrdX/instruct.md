@@ -5,7 +5,7 @@
 
 OrdinalsX协议参考了Atomicals协议和BRC-20协议，理念上跟Atomicals协议更接近，实现上跟BRC-20协议更接近。  
 
-OrdinalsX协议只有deploy和mint指令，不需要transfer指令。基本原理是每一个token都是绑定在一个sat上，转移sat也就意味着转移了token，所以不需要额外的账本记录token的转移历史，也不需要在转移之前铭刻transfer指令，这解决了BRC-20的问题。因为最小utxo的限制，一个utxo至少有546个sat，也就有546个token，要拆分单独的token难度比较大。这个问题我们的解决方案跟Atomicals不同，放在后面讨论。
+OrdinalsX协议只有deploy和mint指令，不需要transfer指令。基本原理是每一个token都是绑定在一个sat上，转移sat也就意味着转移了token，所以不需要额外的账本记录token的转移历史，也不需要在转移之前铭刻transfer指令，这解决了BRC-20需要先铭刻再转移的问题，也解决了Atomicals协议容易出现烧毁的问题。因为最小utxo的限制，一个utxo至少有546个sat，也就有546个token，要拆分单独的token难度比较大。这个问题我们的解决方案跟Atomicals不同，放在后面讨论。
 
 
 deploy
