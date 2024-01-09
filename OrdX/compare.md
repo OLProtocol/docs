@@ -17,4 +17,4 @@
 | 原子swap | PBST | PBST | PBST | 
 | 转移 | 直接转移 | 先铭刻，再转移 | 直接转移 | 
 | 基本单位 | sat | 未定义 | sat | 
-
+{: .table-class width="10%，30%, 30%, 30%"}
