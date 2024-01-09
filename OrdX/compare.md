@@ -5,8 +5,8 @@
 
 
 
-| - | OrdinalsX | BRC-20 | Atomicals  |
-| :---: | :----: | :----: | :----: | 
+| - | OrdinalsX | BRC-20 | Atomicals |
+| -- | :----: | :----: | :----: | 
 | 价值主张 | 数字珍宝 | - | 数字对象 |
 | 资产类型 | FT | FT | NFT+FT | 
 | 铸造方法 | 基于ord的信封，使用deploy和mint | 基于ord的信封，使用deploy、mint、tranfer | 使用"atom"进行承诺&揭露的信封 | 
@@ -17,4 +17,4 @@
 | 原子swap | PBST | PBST | PBST | 
 | 转移 | 直接转移 | 先铭刻，再转移 | 直接转移 | 
 | 基本单位 | sat | 未定义 | sat | 
-{: .table-class width="10%，30%, 30%, 30%"}
+
