@@ -11,6 +11,7 @@
   * [客户端验证](OrdX/appverify.md)
   * [粉尘问题](OrdX/dust.md)
   * [重复铭刻](OrdX/multiscribe.md)
+  * [协议比较](OrdX/compare.md)
   * [使用场景](OrdX/usecase.md)
 * OLDEX
   * [概述](oldex/README.md)
