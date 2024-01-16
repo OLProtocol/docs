@@ -2,7 +2,7 @@
 
 * OrdinalsX
   * [概述](OrdX/README.md)
-  * [背景](OrdX/README.mdbackground.md)
+  * [背景](OrdX/background.md)
   * [指令](OrdX/instruct.md)
   * [客户端验证](OrdX/appverify.md)
   * [粉尘问题](OrdX/dust.md)

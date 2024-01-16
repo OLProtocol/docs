@@ -2,13 +2,13 @@
 =====
 
 
-需要OrdinalsX的原因
+需要ordx的原因
 -----
 1. 增强Ordinals协议，让Ordinals协议也可以发行FT。
 2. 贯彻Ordinals协议的理念：sat是BTC的基本单位，一个sat，一份资产，不管是NFT还是FT。
 3. 推广Ordinals协议的应用：固化Ordinals协议的核心内容，避免Ordinals协议升级带来的麻烦，这对现有的基于Ordinals协议的资产（比如BRC-20）有好处，也能吸引更多基于Ordinals协议进行开发的项目。
 4. 避免BRC-20协议的问题：BRC-20协议在transfer时需要先铭刻再转账，需要额外的账本跟踪BRC-20资产的转移历史。
-5. 为BRC-20的资产提供升级选项：BRC-20资产可以直接upgrade到OrdinalsX协议，成为OrdinalsX资产。
+5. 为BRC-20的资产提供升级选项：BRC-20资产可以直接upgrade到ordx协议，成为ordx资产。
 6. 避免token被烧毁的可能：Atomicals协议在用户不注意的情况下，容易发生token被烧毁的问题。
 7. 为探索在闪电网络上交易Ordinals资产做好准备（OLD协议）。
 
@@ -37,7 +37,7 @@ BRC-20协议是基于Ordinals协议，通过DMT技术发行FT的协议，基本�
 
 Atomicals协议
 -----
-Atomicals协议是非常有潜力的协议，不论是其技术、其理念、还是协议创造者的格局，都是值得敬佩的。不过atmoicals的transfer原则太过于复杂，这些复杂的规则导致了用户的不当行为带来的资产烧毁问题。另外其拆分token的技术方案不符合我们的审美标准，因为这跟我们的一个sat一个token的理念不一致。这些技术选择上的不同，最终导致了我们推进了OrdinalsX协议。  
+Atomicals协议是非常有潜力的协议，不论是其技术、其理念、还是协议创造者的格局，都是值得敬佩的。不过atmoicals的transfer原则太过于复杂，这些复杂的规则导致了用户的不当行为带来的资产烧毁问题。另外其拆分token的技术方案不符合我们的审美标准，因为这跟我们的一个sat一个token的理念不一致。这些技术选择上的不同，最终导致了我们推进了ordx协议。  
 
 Atomicals协议跟Ordinals协议虽然有很多相似的地方，但是理念和实现的方式很不同。可以说，Atomicals协议和Ordinals协议是处在同一层次，并且相互竞争。技术上的良性竞争和相互磨砺最终将促进技术的发展，我们一起见证Ordinals协议和Atomicals协议的交锋和相互激发，共同前进。
 
