@@ -2,7 +2,7 @@
 =====
 
 
-| - | OrdinalsX | BRC-20 | Atomicals |
+| - | OrdX | BRC-20 | Atomicals |
 | :--: | :----: | :----: | :----: | 
 | 价值主张 | 数字珍宝 | - | 数字对象 |
 | 资产类型 | FT | FT | NFT+FT | 

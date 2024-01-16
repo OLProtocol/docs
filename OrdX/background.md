@@ -1,7 +1,6 @@
 背景
 =====
 
-在发展OLD协议之前，我们需要先开发OrdinalsX协议。这个协议是对Ordinals协议的增强，用于发行fungible token。
 
 需要OrdinalsX的原因
 -----
