@@ -12,10 +12,18 @@ Ordinals协议的潜力非常巨大，即使是该协议的创造者Casey，可�
 愿景
 ----
 一聪一世界。  
-One sat, one universe.
+One sat, one universe.  
 
 目标
 -----
 1. 让sat更有价值：挖掘特殊sat的价值，在sat上创造新的价值。   
 2. 让更多的人了解sat，使用sat，享受sat带来的乐趣。  
 
+
+
+链接
+-----
+
+- [GitHub](https://github.com/OLProtocol/)
+- [Twitter](https://x.com/OrdX_Protocol/)
+- [官网](https://ordx.space)

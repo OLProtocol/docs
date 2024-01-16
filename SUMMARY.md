@@ -10,3 +10,4 @@
   * [协议比较](OrdX/compare.md)
   * [使用场景](OrdX/usecase.md)
   * [规划](OrdX/roadmap.md)
+  * [捐赠](OrdX/donate.md)
