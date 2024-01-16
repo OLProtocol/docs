@@ -47,7 +47,7 @@ mint
 | sat | No | 指定sat的序号，只有要求在特殊的sat上mint才需要设置。默认是从utxo的第一个sat开始。 |
 
 例如：  
-{ 
+{  
   "p": "ordx",  
   "op": "mint",  
   "tick": "satoshi"  
@@ -59,7 +59,7 @@ mint时，需要根据deploy声明的规则做检查：检查当前utxo中的sat
 2. deploy的规则”lim“：该次mint的amt小于等于lim。
 3. deploy的规则”block“：如果有设置，该次mint的block高度需要在deploy的规定之内。
 4. deploy的规则”reg“：如果有设置，需要检查该sat的序号是否符合正则表达式reg。
-5. deploy的规则”rar“：如果有设置，检查该sat是否是这种类型。
+5. deploy的规则”rar“：如果有设置，检查该sat是否是这种类型。  
 如果不满足以上规则，就不允许mint。即使使用工具强行mint，钱包也可以自主检查是否满足deploy的规则自行验证。  
 
 
