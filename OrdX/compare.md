@@ -12,5 +12,6 @@
 |地址格式| P2TR | P2TR | P2TR | 
 | 原子swap | PBST | PBST | PBST | 
 | 转移 | 直接转移 | 先铭刻，再转移 | 直接转移 | 
-| 基本单位 | 一sat一token，跟sat绑定，使用ordinals协议对sat编码 | 跟地址绑定，无限可分 | 一sat一token，但是跟sat不绑定，不需要对sat编码 | 
-| 销毁可能性 | sat不可销毁，token也就无法销毁，即使使用不支持ordinals协议的钱包也不会导致token销毁，最多被转移 | 不可销毁 | 使用错误的钱包或者错误的使用方式容易导致token被销毁 | 
+| 基本单位 | 一sat一token，跟sat绑定，使用ordinals协议对sat编码 | 跟地址绑定 | 一sat一token，不跟sat绑定，不需要对sat编码 | 
+| 拆分方案 | 不可拆分，受最小utxo限制，需要在Layer2中做拆分 | 无限可分 | 使用ST操作符和Exp参数进行拆分（和其原子性原则有冲突） | 
+| 烧毁可能性 | sat不可烧毁，token也就无法烧毁 | 不可烧毁 | 使用错误的钱包或者错误的使用方式容易导致token被烧毁 | 
