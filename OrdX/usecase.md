@@ -11,7 +11,7 @@
 {   
   "p": "ordx",  
   "op": "deploy",  
-  "tick": "Pearl",  
+  "tick": "Pearls",  
   "block": "828200-830000",  
   "lim": "10000",  
   "des": "The Oriental Pearl."    
@@ -28,7 +28,7 @@
 {  
   "p": "ordx",  
   "op": "deploy",  
-  "tick": "Jade",  
+  "tick": "Jades",  
   "lim": "1",  
   "rar": "uncommon",  
   "des": "Miner's Jade."  
@@ -41,7 +41,7 @@ Domo的红宝石
 {  
   "p": "ordx",  
   "op": "deploy",  
-  "tick": "Ruby",  
+  "tick": "Rubies",  
   "lim": "1",  
   "rar": "rare",  
   "des": "Domo's Ruby."  
@@ -54,7 +54,7 @@ Casey的蓝宝石
 {   
   "p": "ordx",  
   "op": "deploy",  
-  "tick": "Sapphire",  
+  "tick": "Sapphires",  
   "lim": "1",  
   "rar": "epic",  
   "des": "Casey's Sapphire."  
@@ -67,7 +67,7 @@ Casey的蓝宝石
 {  
   "p": "ordx",  
   "op": "deploy",  
-  "tick": "Gold",  
+  "tick": "Golds",  
   "lim": "1",  
   “reg”：“^[1-9][0-9]*0{8}$”,  
   "des": "The first satoshi of one BTC"  
