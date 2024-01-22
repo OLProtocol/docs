@@ -16,10 +16,10 @@ deploy
 | p	| Yes | 协议名称: ordx |
 | op | Yes | 指令: deploy, mint |
 | tick | Yes | 名称: 只允许3或5-16个字符，（为brc-20保留4个字符） |
-| lim | No | 每次mint的限额，默认是1 |
-| block | No | 没有总量限制，但是有mint的开始高度和结束高度（开始-结束）。（block高度范围和sat属性，必须至少选一项）|
-| reg | No | 要求该sat的序号满足一定的规则（正则表达式），默认是不设置。比如表示尾部有n个零：^[1-9][0-9]*0{n}$ |
+| lim | No | 每次mint的限额，默认是10000。如果deploy特殊sat上的token，默认是1。 |
+| block | No | 没有总量限制，但是有mint的开始高度和结束高度（开始-结束）。（block高度范围和sat属性，只能选一项）|
 | rar | No | Sat的稀缺度, 默认是不指定。稀缺度属性：common，uncommon，rare，epic，legendary, mythic。 |
+| reg | No | 要求该sat的序号满足一定的规则（正则表达式），默认是不设置。比如表示尾部有n个零：^[1-9][0-9]*0{n}$。 |
 | des | No | 描述内容 |
 
 
@@ -32,7 +32,8 @@ deploy
   "lim": "10000"  
 }  
   
-在普通情况下，ordx跟BRC-20协议类似，通过铭刻deploy指令来部署token。不同的是没有供应量的限制，而是指定mint的有效区块高度。在这个高度之内mint的所有token都有效。另外一个不同的地方，deploy时可以声明具备特殊属性的sat才能mint：reg和rar是用来对sat的属性做规定的。可以发现，ordx协议除了用于发行普通的token之外，还能发行特殊的token，仅有特殊的sat才能mint出来。这个特性是为了挖掘sat的独特价值。
+在普通情况下，ordx跟BRC-20协议类似，通过铭刻deploy指令来部署token。不同的是没有供应量的限制，而是指定mint的有效区块高度。在这个高度之内mint的所有token都有效。另外一个不同的地方，deploy时可以声明具备特殊属性的sat才能mint：reg和rar是用来对sat的属性做规定的。reg目前支持正则表达式，该属性后续可能采用预定义sat属性的方式来简化输入，比如上面这条规则简化为trz=9。另外，对于部署到特殊sat的token，不需要mint操作，索引服务直接将所有符合要求的sat找出来并自动完成mint操作，这样节省了大量的mint操作的gas费用。但这个操作可能需要消耗大量的服务器资源，所以需要对deploy收取比较高的服务费用（本质上就是对2100万亿的sat做过滤和标记）。  
+可以发现，ordx协议除了用于发行普通的token之外，还能发行铭刻在特殊sat的token，这个特性是为了挖掘特殊sat的独特价值。
 
 
 mint
@@ -44,7 +45,7 @@ mint
 | op | Yes | 指令: deploy, mint |
 | tick | Yes | 名称: 只允许3或5-16个字符，（为brc-20保留4个字符） |
 | amt | No | mint得到的token的数量，默认等于lim，不能超过lim |
-| sat | No | 指定sat的序号，只有要求在特殊的sat上mint才需要设置。默认是从utxo的第一个sat开始。 |
+
 
 例如：  
 {  
@@ -53,17 +54,31 @@ mint
   "tick": "satoshi"  
 }
 
-
-mint时，需要根据deploy声明的规则做检查：检查当前utxo中的sat，看看是否满足规则:  
-1. sat：如果有设置，指定这次mint应该从哪个sat开始，该sat后面需要有足够的sat（amt-1），才能mint成功。
-2. deploy的规则”lim“：该次mint的amt小于等于lim。
-3. deploy的规则”block“：如果有设置，该次mint的block高度需要在deploy的规定之内。
-4. deploy的规则”reg“：如果有设置，需要检查该sat的序号是否符合正则表达式reg。
-5. deploy的规则”rar“：如果有设置，检查该sat是否是这种类型。  
+只有普通的token需要mint。铭刻在特殊sat的token不需要做mint，UI交互时直接拒绝。
+mint时，需要根据deploy声明的规则做检查：  
+1. deploy的规则”lim“：该次mint的amt小于等于lim。
+2. deploy的规则”block“：该次mint的block高度需要在deploy的规定之内。
 如果不满足以上规则，就不允许mint。即使使用工具强行mint，钱包也可以自主检查是否满足deploy的规则自行验证。  
 
 
 
 upgrade
 ----
-将其他协议的FT升级到ordx，主要支持brc-20。以后扩展。
+将其他协议的FT升级到ordx，主要支持brc-20。以后扩展。例如：   
+
+{   
+  "p": "ordx",  
+  "op": "upgrade",  
+  "tick": "ordi",  
+  "amt": "1000",  
+  "org": "brc-20",  
+  "cfactor": "1"  
+}  
+
+brc-20的upgrade方式：  
+因为brc-20实际上不跟sat或者utxo绑定，只是通过inscription把账记在address上，所以需要将brc-20转入一个黑洞地址，然后再提供对应的ordx token。但是这有一个问题，btc没有黑洞地址，所谓的黑洞地址，只是一个中本聪地址，这会让中本聪地址中的utxo暴涨，越来越多，最终导致btc网络不堪重负。所是转入一个代理服务地址，由代理服务提供转换，方便brc-20的转入转出。如果最终能有足够比例的token升级到新协议，代理将老token转入黑洞地址。  
+
+
+最理想的方案：
+通过OLD协议锁定到闪电网络通道中，在提款时直接转换成ordx的token。这是最简单直接的方案。  
+

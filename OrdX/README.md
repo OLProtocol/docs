@@ -17,8 +17,9 @@ One sat, one universe.
 
 目标
 -----
-1. 让sat更有价值：挖掘特殊sat的价值，在sat上创造新的价值。   
-2. 让更多的人了解sat，使用sat，享受sat带来的乐趣。  
+1. 挖掘特殊sat的价值：特殊属性的sat，或者特殊历史事件的sat。
+2. 让sat更有价值：在sat上铭刻token和数据，为sat创造新的价值。   
+3. 让更多的人了解sat，使用sat，享受sat带来的乐趣。  
 
 
 
