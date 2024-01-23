@@ -4,6 +4,7 @@
   * [概述](OrdX/README.md)
   * [背景](OrdX/background.md)
   * [指令](OrdX/instruct.md)
+  * [转移](OrdX/transfer.md)
   * [客户端验证](OrdX/appverify.md)
   * [拆分问题](OrdX/dust.md)
   * [重复铭刻](OrdX/multiscribe.md)
