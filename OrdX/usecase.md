@@ -86,7 +86,7 @@ Casey的红宝石
   “cn”：“99999”,  
   "des": "The coin has n consecutive numbers, which means everything goes well."  
 }  
-在某个具备99999个连续编号的sat上mint一个玉如意。拥有一个玉如意的人将获得万事如意的祝福。
+在某个具有99999个连续编号的SatRange上mint一个玉如意，一个token就有99999个sat，拥有一个玉如意的人将获得万事如意的祝福。
 
 
 结论
