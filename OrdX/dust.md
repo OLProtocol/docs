@@ -12,5 +12,5 @@
 当然拆分token的需求依然存在。为了在目前的条件下对token进行拆分，我们提供了3个方案：
 1. 在BTC的二层网络上解决这个问题。这是我们后续的主要工作之一，新协议名字为Ordinals Lightning DEX Protocol（OLD协议）。在支持OLD协议的DEX上，token几乎可以无限拆分，但是转回主网时，依然需要遵循当前最小utxo的限制。
 2. 临时的方案：每次mint时，绑定足够多的sat，比如10000个sat，那至少可以拆分成10个utxo，每个有1000个sat。
-3. 灵活利用UTXO，将一个铭刻了某种token的最小UTXO（546聪），结合其他两个UTXO，可以将这个UTXO包含的Token拆成更小的任意两部分：  
+3. 灵活利用UTXO，将一个铭刻了某种token的最小UTXO（546聪），结合其他两个UTXO，可以将这个UTXO包含的Token拆成更小的任意两部分。重复这个过程，就可以达成很好的结果：  
 ![拆分](substract.jpg)
