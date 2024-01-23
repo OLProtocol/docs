@@ -11,7 +11,7 @@
 {   
   "p": "ordx",  
   "op": "deploy",  
-  "tick": "Pearls",  
+  "tick": "Pearl",  
   "block": "828200-830000",  
   "lim": "10000",  
   "des": "The Oriental Pearl."    
@@ -31,35 +31,35 @@
   "tick": "Jades",  
   "lim": "1",  
   "rar": "uncommon",  
-  "des": "Miner's Jade."  
+  "des": "Miner's Jades."  
 }  
-每个区块的第一个sat才能mint成功，预计每个token值1-10个BTC。
+每个区块的第一个sat才能mint成功，预计每个Jades值1个BTC。
 
 
-Domo的红宝石
+Domo的蓝宝石
 ----
 {  
   "p": "ordx",  
   "op": "deploy",  
-  "tick": "Rubies",  
+  "tick": "Sapphires",  
   "lim": "1",  
   "rar": "rare",  
-  "des": "Domo's Ruby."  
+  "des": "Domo's Sapphires."  
 }  
-只有rare属性的sat才能mint成红宝石，最多只有3437个红宝石。目前只有不到400个，预计每个值100BTC。
+只有rare属性的sat才能mint成蓝宝石，最多只有3437个蓝宝石。目前只有不到400个，预计每个值100BTC。
 
 
-Casey的蓝宝石
+Casey的红宝石
 ----
 {   
   "p": "ordx",  
   "op": "deploy",  
-  "tick": "Sapphires",  
+  "tick": "Rubies",  
   "lim": "1",  
   "rar": "epic",  
-  "des": "Casey's Sapphire."  
+  "des": "Casey's Rubies."  
 }  
-只有epic属性的sat才能mint成蓝宝石，最多只有32个蓝宝石。目前只有3个，预计每个值10000BTC。
+只有epic属性的sat才能mint成红宝石，最多只有32个红宝石。目前只有3个，预计每个值10000BTC。
 
 
 数字黄金
@@ -73,6 +73,20 @@ Casey的蓝宝石
   "des": "The first satoshi of one BTC"  
 }  
 每个BTC的第一个sat才能mint成功。正则表达式的意思是该sat的序号的末尾是8个0。这意味着，每个token值一个BTC。
+
+
+
+玉如意
+----
+{  
+  "p": "ordx",  
+  "op": "deploy",  
+  "tick": "JadeRuyi",  
+  "lim": "9999",  
+  “cn”：“99999”,  
+  "des": "The coin has n consecutive numbers, which means everything goes well."  
+}  
+在某个具备99999个连续编号的sat上mint一个玉如意。拥有一个玉如意的人将获得万事如意的祝福。
 
 
 结论
