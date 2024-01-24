@@ -21,7 +21,7 @@
    
 
 
-为了挖掘特殊sat的价值，并且方便这些特殊sat的管理，我们将这些特殊sat归类，并将他们铭刻为某种Fungible Token。这是OrdX协议的特殊能力。 下面是我们预先支持的特殊sat的类型，你可以在我们网站上检查下自己的BTC钱包中是否包含了这些闪亮的宝石（只需要提供钱包地址）。或者你认为哪些类型的sat更有价值，可以为这些sat部署一个响亮的名字。(以下功能需要下个版本才支持)  
+为了挖掘特殊sat的价值，并且方便这些特殊sat的管理，我们将这些特殊sat归类，并将他们铭刻为某种Fungible Token。这是OrdX协议的特殊能力。 下面是我们支持的特殊sat的类型，你可以在我们网站上检查下自己的BTC钱包中是否包含了这些闪亮的宝石（只需要提供钱包地址）。或者你认为哪些类型的sat更有价值，可以为这些sat部署一个响亮的名字。(以下功能需要下个版本才支持)  
 
 矿工的翡翠
 ----
@@ -30,7 +30,7 @@
   "op": "deploy",  
   "tick": "Jades",  
   "lim": "1",  
-  "rar": "uncommon",  
+  "attr": "rar=uncommon",  
   "des": "Miner's Jades."  
 }  
 每个区块的第一个sat才能mint成功，预计每个Jades值1个BTC。
@@ -43,7 +43,7 @@ Domo的蓝宝石
   "op": "deploy",  
   "tick": "Sapphires",  
   "lim": "1",  
-  "rar": "rare",  
+  "attr": "rar=rare",  
   "des": "Domo's Sapphires."  
 }  
 只有rare属性的sat才能mint成蓝宝石，最多只有3437个蓝宝石。目前只有不到400个，预计每个值100BTC。
@@ -56,7 +56,7 @@ Casey的红宝石
   "op": "deploy",  
   "tick": "Rubies",  
   "lim": "1",  
-  "rar": "epic",  
+  "attr": "rar=epic",  
   "des": "Casey's Rubies."  
 }  
 只有epic属性的sat才能mint成红宝石，最多只有32个红宝石。目前只有3个，预计每个值10000BTC。
@@ -69,7 +69,7 @@ Satoshi的钻石
   "op": "deploy",  
   "tick": "Diamond",  
   "lim": "1",  
-  "rar": "mythic",  
+  "attr": "rar=mythic",  
   "des": "Satoshi's Diamond."  
 }  
 只有mythic属性的sat才能mint成钻石，全网只有一个，其价值无法估量。
@@ -82,10 +82,10 @@ Satoshi的钻石
   "op": "deploy",  
   "tick": "Golds",  
   "lim": "1",  
-  “reg”：“^[1-9][0-9]*0{8}$”,  
+  "attr": "trz=8",  
   "des": "The first satoshi in a BTC"  
 }  
-每个BTC的第一个sat才能mint成功。正则表达式的意思是该sat的序号的末尾是8个0。这意味着，每个token值一个BTC。
+每个BTC的第一个sat才能mint成功。该sat的序号的末尾是8个0。这意味着，每个token值一个BTC。
 
 
 
@@ -95,12 +95,12 @@ Satoshi的钻石
   "p": "ordx",  
   "op": "deploy",  
   "tick": "如意",  
-  "lim": "1000",
-  ”“  
-  “cn”：“100000”,  
+  "lim": "1000",  
+  "n": "100000",  
+  "attr": "cn=100000",    
   "des": "万事如意"  
 }  
-在某个具有100000个连续编号的SatRange上mint一个如意，一个如意就有100000个sat，不可拆分，拥有一个如意的人将获得万事如意的祝福。
+在某个具有100000个连续编号的SatRange上mint一个如意，一个如意就有100000个sat，拥有一个如意的人将获得万事如意的祝福。
 
 
 红包
@@ -110,10 +110,11 @@ Satoshi的钻石
   "op": "deploy",  
   "tick": "红包",  
   "block": "830000-838888",  
-  "lim": "888000",    
+  "lim": "888000",   
+  "n": "888",   
   "des": "恭喜发财"  
 }  
-红包在具有特别的意义，在华人圈尤其流行，恭喜发财，红包拿来。
+每个红包需要888个sat。红包具有特别的意义，在华人圈尤其流行，恭喜发财，红包拿来。
 
 数字ID
 ----
