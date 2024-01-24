@@ -17,7 +17,7 @@
   "des": "The Oriental Pearl."    
 }   
 我们计划在2024年1月25日正式发布协议，并且部署第一个Token：Pearl。  
-大概在2024年2月1日前后开启自由mint，持续到2月5日左右结束（由区块高度828200-828800决定有效的mint时间）。这是ordx协议的第一个token，也是一个meme币，仅供试验，没有价值，不要FOMO。  
+大概在2024年2月1日前后开启fair mint，持续到2月5日左右结束（由区块高度828200-828800决定有效的mint时间）。这是ordx协议的第一个token，也是一个meme币，仅供试验，没有价值，不要FOMO。  
    
 
 
@@ -83,24 +83,37 @@ Satoshi的钻石
   "tick": "Golds",  
   "lim": "1",  
   “reg”：“^[1-9][0-9]*0{8}$”,  
-  "des": "The first satoshi of one BTC"  
+  "des": "The first satoshi in a BTC"  
 }  
 每个BTC的第一个sat才能mint成功。正则表达式的意思是该sat的序号的末尾是8个0。这意味着，每个token值一个BTC。
 
 
 
-玉如意
+如意
 ----
 {  
   "p": "ordx",  
   "op": "deploy",  
-  "tick": "JadeRuyi",  
-  "lim": "1000",  
+  "tick": "如意",  
+  "lim": "1000",
+  ”“  
   “cn”：“100000”,  
-  "des": "The coin has n consecutive numbers, which means everything goes well."  
+  "des": "万事如意"  
 }  
-在某个具有100000个连续编号的SatRange上mint一个玉如意，一个token就有100000个sat，拥有一个玉如意的人将获得万事如意的祝福。
+在某个具有100000个连续编号的SatRange上mint一个如意，一个如意就有100000个sat，不可拆分，拥有一个如意的人将获得万事如意的祝福。
 
+
+红包
+----
+{  
+  "p": "ordx",  
+  "op": "deploy",  
+  "tick": "红包",  
+  "block": "830000-838888",  
+  "lim": "888000",    
+  "des": "恭喜发财"  
+}  
+红包在具有特别的意义，在华人圈尤其流行，恭喜发财，红包拿来。
 
 数字ID
 ----

@@ -14,12 +14,13 @@ deploy
 | KEY | Required | Description |
 | :---: | :---: | :------- |
 | p	| Yes | 协议名称: ordx |
-| op | Yes | 指令: deploy, mint |
+| op | Yes | 指令: deploy |
 | tick | Yes | 名称: 只允许3或5-16个字符，（为brc-20保留4个字符） |
-| lim | No | 每次mint的限额，默认是10000。如果deploy特殊sat上的token，默认是1。 |
+| lim | No | 每次mint的token的限额，默认是10000。如果deploy特殊sat上的token，默认是1。 |
+| n | No | 正整数，一个token需要n个sat，默认是1，最小也是1。 | 
 | block | No | 没有总量限制，但是有mint的开始高度和结束高度（开始-结束）。（block高度范围和sat属性，只能选一项）|
 | rar | No | Sat的稀缺度, 默认是不指定。稀缺度属性：common，uncommon，rare，epic，legendary, mythic。 |
-| reg | No | 要求该sat的序号满足一定的规则（正则表达式），默认是不设置。比如表示尾部有n个零：^[1-9][0-9]*0{n}$。 |
+| attr | No | sat的属性要求，比如"rar=uncommon;cn=1000;trz=8"，可扩展。 |
 | des | No | 描述内容 |
 
 
@@ -31,9 +32,17 @@ deploy
   “block”: "830000-833144",  
   "lim": "10000"  
 }  
-  
-在普通情况下，ordx跟BRC-20协议类似，通过铭刻deploy指令来部署token。不同的是没有供应量的限制，而是指定mint的有效区块高度。在这个高度之内mint的所有token都有效。另外一个不同的地方，deploy时可以声明具备特殊属性的sat才能mint：reg和rar是用来对sat的属性做规定的。reg目前支持正则表达式，该属性后续可能采用预定义sat属性的方式来简化输入，比如上面这条规则简化为trz=9。另外，对于部署到特殊sat的token，可以不需要mint操作，而是让索引服务直接将所有符合要求的sat找出来并自动完成mint操作，这样节省了大量的mint操作的gas费用。但这个操作可能需要消耗大量的服务器资源，所以需要对deploy收取比较高的服务费用（本质上就是对2100万亿的sat做过滤和标记）。  
-可以发现，ordx协议除了用于发行普通的token之外，还能发行铭刻在特殊sat的token，这个特性是为了挖掘特殊sat的独特价值。如何定义sat的属性，这是一个可以扩展的属性。
+
+attr是一个可以扩展的属性，目的是让越来越多特殊的sat可以通过这个属性被筛选出来。目前支持的属性有：
+1. rar：稀有度，在Ordinals中定义：common, uncommon, rare, epic, legendary, mythic 
+2. cn: consecutive numbers，连号的数量，比如 cn=1000，1000个连续编号的sat
+3. trz：trailing zeros，尾部为零的数量，比如trz=8，说明该sat的编号的尾部有8个零
+
+通过deploy指令，我们可以发现，ordx跟其他协议的不同主要体现在这几个方面：
+1. 没有供应量的限制，而是指定mint的有效区块高度。在这个高度之内mint的所有token都有效。
+2. 一个sat绑定一份资产，一个Token可以表达成n份资产，也就是一个Token绑定n个sat。
+3. 可以指定具备某种属性的sat才能mint，也就是资产只能绑定在特殊属性的sat上。
+
 
 
 mint
@@ -42,9 +51,10 @@ mint
 | KEY | Required | Description |
 | :---: | :---: | :------- |
 | p	| Yes | 协议名称: ordx |
-| op | Yes | 指令: deploy, mint |
+| op | Yes | 指令: mint |
 | tick | Yes | 名称: 只允许3或5-16个字符，（为brc-20保留4个字符） |
 | amt | No | mint得到的token的数量，默认等于lim，不能超过lim |
+| sat | No | sat的序号，设置了attr属性的ticker，mint时需要提供满足条件的sat |
 
 
 例如：  
@@ -52,12 +62,22 @@ mint
   "p": "ordx",  
   "op": "mint",  
   "tick": "satoshi"  
-}
+}   
 
-mint时，需要根据deploy声明的规则做检查：  
-1. deploy的规则”lim“：该次mint的amt小于等于lim。
-2. deploy的规则”block“：该次mint的block高度需要在deploy的规定之内。
-如果不满足以上规则，就不允许mint。即使使用工具强行mint，钱包也可以自主检查是否满足deploy的规则自行验证。  
+每次mint时，需要做的通用检查：
+1. 协议必须是ordx
+2. op必须是mint
+3. tick必须已经部署过，而且还可以继续mint
+4. amt小于等于deploy的规则“lim”。
+5. 如果有deploy的规则“n”：该次mint要求的sat数量至少是n，也就是绑定的utxo的sat数量需要大于等于n
+6. 如果有deploy的规则”block“：该次mint的block高度要规定之内
+7. 如果有deploy的规则“attr”：mint时必须提供sat这个参数，并且根据attr对该sat做检查：
+    * 如果有rar属性：检查该sat是否是这种类型
+    * 如果有trz属性：检查该sat的序号是否有足够的尾数零
+    * 如果有cn属性：检查从该sat开始，是否有足够的连续编号的sat
+
+不满足以上规则，就不允许mint。即使有工具强行mint，ordx的indexer也会判定无效。钱包可以独立对每个token做verify，通过Ordinals协议的indexer和Deploy指令的数据就可以直接验证。
+
 
 
 
