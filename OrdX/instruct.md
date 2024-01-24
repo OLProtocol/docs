@@ -35,7 +35,7 @@ deploy
 attr是一个可以扩展的属性，目的是让越来越多特殊的sat可以通过这个属性被筛选出来。目前支持的属性有：
 1. rar：稀有度，在Ordinals中定义：common, uncommon, rare, epic, legendary, mythic 
 2. cn: consecutive numbers，连号的数量，比如 cn=1000，1000个连续编号的sat
-3. trz：trailing zeros，尾部为零的数量，比如trz=8，说明该sat的编号的尾部有8个零
+3. trz：trailing zeros，尾部为零的数量，比如trz=8，说明该sat的编号的尾部有8个零  
 如果你有什么好主意，或者发掘了什么特殊价值的sat，可以提交代码给我们。  
 
 通过deploy指令，我们可以发现，ordx跟其他协议的不同主要体现在这几个方面：
@@ -67,16 +67,16 @@ mint
 每次mint时，需要做的通用检查：
 1. 协议必须是ordx
 2. op必须是mint
-3. tick必须已经部署过，而且还可以继续mint
-4. amt小于等于deploy的规则“lim”。
+3. tick必须已经部署过
+4. amt小于等于deploy的规则“lim”
 5. 如果有deploy的规则“n”：该次mint要求的sat数量至少是n，也就是绑定的utxo的sat数量需要大于等于n
-6. 如果有deploy的规则”block“：该次mint的block高度要规定之内
+6. 如果有deploy的规则”block“：该次mint的block高度要在规定之内
 7. 如果有deploy的规则“attr”：mint时必须提供sat这个参数，并且根据attr对该sat做检查：
     * 如果有rar属性：检查该sat是否是这种类型
     * 如果有trz属性：检查该sat的序号是否有足够的尾数零
     * 如果有cn属性：检查从该sat开始，是否有足够的连续编号的sat
 
-不满足以上规则，就不允许mint。即使有工具强行mint，ordx的indexer也会判定无效。钱包可以独立对每个token做verify，通过Ordinals协议的indexer和Deploy指令的数据就可以直接验证。
+不满足以上规则，就不允许mint。即使有工具强行mint，ordx的indexer也会判定无效。钱包可以独立对每个token做验证，通过Ordinals协议的indexer和Deploy指令的数据就可以直接验证。
 
 
 
