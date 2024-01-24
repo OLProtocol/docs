@@ -19,7 +19,6 @@ deploy
 | lim | No | 每次mint的token的限额，默认是10000。如果deploy特殊sat上的token，默认是1。 |
 | n | No | 正整数，一个token需要n个sat，默认是1，最小也是1。 | 
 | block | No | 没有总量限制，但是有mint的开始高度和结束高度（开始-结束）。（block高度范围和sat属性，只能选一项）|
-| rar | No | Sat的稀缺度, 默认是不指定。稀缺度属性：common，uncommon，rare，epic，legendary, mythic。 |
 | attr | No | sat的属性要求，比如"rar=uncommon;cn=1000;trz=8"，可扩展。 |
 | des | No | 描述内容 |
 
