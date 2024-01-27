@@ -132,9 +132,10 @@ Satoshi的钻石
   "p": "ordx",  
   "op": "deploy",  
   "tick": "your_name",  
+  "type": "DID",   
   "des": "your public message"      
 }  
-这是一种特殊的铭文，相当于通过占用一个名字来充当自己的DID。  
+这是一种特殊的铭文，相当于通过占用一个名字来充当自己的DID。可以看到，名字是稀缺的，不管是用户名字，还是作为Token的名字，都在竞争有限的名字空间。请注意，该deploy操作也会绑定到sat上，谁拥有这个sat，谁就拥有该DID。针对类型是DID的铭文，我们后续会根据需求扩展功能。  
 
 
 
