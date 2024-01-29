@@ -22,10 +22,3 @@ One sat, one universe.
 3. 让更多的人了解sat，使用sat，享受sat带来的乐趣。  
 
 
-
-链接
------
-
-- [GitHub](https://github.com/OLProtocol/)
-- [Twitter](https://x.com/OrdX_Protocol/)
-- [官网](https://ordx.space)
