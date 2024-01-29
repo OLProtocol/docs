@@ -10,9 +10,8 @@
   * [重复铭刻](OrdX/multiscribe.md)
   * [协议比较](OrdX/compare.md)
   * [使用场景](OrdX/usecase.md)
-  * [规划](OrdX/roadmap.md)
-  * [捐赠](OrdX/donate.md)
 * OLDEX
   * [概述](oldex/README.md)
-  * [规划](oldex/roadmap.md)
+* [规划](roadmap.md)
+* [捐赠](donate.md)
 * [关于](README.md)
