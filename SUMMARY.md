@@ -12,6 +12,8 @@
   * [使用场景](OrdX/usecase.md)
 * OLDEX
   * [概述](oldex/README.md)
+* 常见问题
+  * [如何判断一个Ordinals NFT是ordx资产](QA/failmint.md)
 * [规划](roadmap.md)
 * [捐赠](donate.md)
 * [关于](README.md)
