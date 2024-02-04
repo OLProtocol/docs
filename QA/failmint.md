@@ -16,4 +16,4 @@
 ordx资产在unisat中被识别为一个Ordinals NFT，选择该NFT，关注下内容和占用的sats，然后滚动到最后，点击genesis transaction，跳到mempool查看该NFT的铸造高度，如果在要求范围内，就是有效的ordx资产。  
 
 
-官网上后面会提供根据铭文序号查询是否是ordx资产的功能。
+官网会提供根据铭文序号查询是否是ordx资产的功能。
