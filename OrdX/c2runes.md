@@ -62,5 +62,5 @@ Runes不使用Ordinals协议，这让我们非常的失望，对Runes失望。
 看起来把Ordinals协议放到类似IP/TCP协议地位的，也就只有ordx协议的开发团队了。我们将坚持这个结论，持续推进Ordinals协议的基础建设和应用，让基于Ordinals协议发行的资产，占据BTC生态的重要地位。
 
 
-
+（未完结，等待更新）
 
