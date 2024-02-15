@@ -6,7 +6,10 @@
   * [指令](OrdX/instruct.md)
   * 探讨
     * [设计理念](OrdX/concept.md)
-    * [Ordinals协议的重要性](OrdX/ordinals.md)
+    * [Ordinals协议是BTC生态的IP协议](OrdX/ordinals.md)
+    * [ordx协议的基础属性和潜力](OrdX/potential.md)
+    * [ordx协议的图币二象性](OrdX/duality.md)
+    * [为什么需要一币一聪的方案](OrdX/oneone.md)
     * [转移](OrdX/transfer.md)
     * [客户端验证](OrdX/appverify.md)
     * [拆分问题](OrdX/dust.md)
