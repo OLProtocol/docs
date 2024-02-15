@@ -13,8 +13,10 @@
     * [转移](OrdX/transfer.md)
     * [客户端验证](OrdX/appverify.md)
     * [拆分问题](OrdX/dust.md)
+    * [拆分方案](OrdX/substract.md)
     * [重复铭刻](OrdX/multiscribe.md)
-  * [协议比较](OrdX/compare.md)
+  * [协议比较]
+    * [对比表格](OrdX/compare.md)
     * [跟Atomicals协议的比较](OrdX/c2atom.md)
     * [跟Runes协议的比较](OrdX/c2runes.md)
   * [使用场景](OrdX/usecase.md)
