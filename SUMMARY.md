@@ -19,7 +19,8 @@
     * [对比表格](OrdX/compare.md)
     * [跟Atomicals协议的比较](OrdX/c2atom.md)
     * [跟Runes协议的比较](OrdX/c2runes.md)
-  * [使用场景](OrdX/usecase.md)
+  * [用例](OrdX/usecase.md)
+    * [BTC上第一个在特殊聪上铸造的Token：矿工的翡翠](OrdX/usecase-jades.md)
 * OLDEX
   * [概述](oldex/README.md)
 * 常见问题
