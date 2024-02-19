@@ -1,12 +1,13 @@
 # Table of contents
 
-* OrdinalsX
+* Ordinals X
   * [概述](OrdX/README.md)
   * [背景](OrdX/background.md)
   * [指令](OrdX/instruct.md)
   * 探讨
     * [设计理念](OrdX/concept.md)
     * [Ordinals协议是BTC生态的IP协议](OrdX/ordinals.md)
+    * [再谈为何Ordinals协议足以比肩IP协议](OrdX/ordinals2.md)
     * [ordx协议的基础属性和潜力](OrdX/potential.md)
     * [ordx协议的图币二象性](OrdX/duality.md)
     * [为什么需要一币一聪的方案](OrdX/oneone.md)
