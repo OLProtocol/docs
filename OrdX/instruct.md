@@ -5,7 +5,7 @@
 
 ordx协议参考了Atomicals协议和BRC-20协议，理念上跟Atomicals协议更接近，实现上跟BRC-20协议更接近。  
 
-ordx协议只有deploy和mint指令，不需要transfer指令。基本原理是每一份资产都是绑定在一个sat上，转移sat也就意味着转移了资产，所以不需要额外的账本记录资产的转移历史，也不需要在转移之前铭刻transfer指令，这解决了BRC-20需要先铭刻再转移的问题，也解决了Atomicals协议容易出现烧毁的问题。
+ordx协议只有deploy和mint指令，不需要transfer指令。基本原理是每一份资产都是绑定在一个sat上，转移sat也就意味着转移了资产，所以不需要额外的账本记录资产的转移历史，也不需要在转移之前铭刻transfer指令。
 
 
 deploy
@@ -17,7 +17,6 @@ deploy
 | op | Yes | 指令: deploy |
 | tick | Yes | 名称: 只允许3或5-16个字符，（为brc-20保留4个字符） |
 | lim | No | 每次mint的token的限额，默认是10000。如果deploy特殊sat上的token，默认是1。 |
-| n | No | 正整数，一个token需要n个sat，默认是1，最小也是1。 | 
 | block | No | 没有总量限制，但是有mint的开始高度和结束高度（开始-结束）。（block高度范围和sat属性，只能选一项）|
 | attr | No | sat的属性要求，比如"rar=uncommon;cn=1000;trz=8"，可扩展。 |
 | des | No | 描述内容 |
