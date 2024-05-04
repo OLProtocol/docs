@@ -9,7 +9,7 @@
 链接
 -----
 
-- [GitHub](https://github.com/OLProtocol/)
-- [Twitter](https://x.com/OrdX_Protocol/)
+- [GitHub](https://github.com/SAT20_Protocol/)
+- [Twitter](https://x.com/SAT20_Protocol/)
 - [官网](https://sat20.org)
 
