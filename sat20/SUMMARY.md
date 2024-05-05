@@ -26,6 +26,7 @@
     * [场景]
       * [DEX](circulation/cases/sdex.md)
       * [MPC](circulation/cases/MPC.md)
+  * [典型应用](cases/readme.md)
 * [规划](roadmap.md)
 * [捐赠](donate.md)
 * [关于](about.md)
