@@ -32,13 +32,6 @@ deploy
 attr是一个可以扩展的属性，目的是让越来越多特殊的sat可以通过这个属性被筛选出来。目前支持的属性有：
 1. rar：稀有度，在Ordinals中定义：common, uncommon, rare, epic, legendary, mythic 
 2. trz：trailing zeros，尾部为零的数量，比如trz=8，说明该sat的编号的尾部有8个零  
-如果你有什么好主意，或者发掘了什么特殊价值的sat，可以提交代码给我们。  
-
-通过deploy指令，我们可以发现，ordx跟其他协议的不同主要体现在这几个方面：
-1. 一个sat绑定一份资产
-2. 没有供应量的限制，而是指定mint的有效区块高度。在这个高度之内mint的所有token都有效。
-3. 通过父子铭文的方式支持项目方全盘控制。
-4. 可以指定具备某种属性的sat才能mint，也就是资产只能绑定在特殊属性的sat上。
 
 
 

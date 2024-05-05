@@ -27,4 +27,4 @@
       * [MPC](circulation/cases/MPC.md)
 * [规划](roadmap.md)
 * [捐赠](donate.md)
-* [关于](readme.md)
+* [关于](about.md)
