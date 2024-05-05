@@ -7,6 +7,7 @@
     * [介绍](issuance/readme.md)
     * [指令](issuance/instruct.md)
     * [聪的编码：序号](issuance/ordinal.md)
+    * [聪的读写：铭刻](issuance/inscribe.md)
     * [资产发行模式](issuance/model.md)
     * [SAT20名字服务](issuance/SNS.md)
     * [场景]
