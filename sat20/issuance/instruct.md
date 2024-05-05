@@ -3,6 +3,7 @@
 
 
 SAT20资产发行协议只有deploy和mint指令，不需要transfer指令。
+指令内容目前支持两种形式，一种是以json文本格式，写入ordinals信封中的body中。另一种是使用压缩的key-value格式，写入metadata中。
 
 
 deploy
