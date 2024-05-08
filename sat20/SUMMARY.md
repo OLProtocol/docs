@@ -3,7 +3,7 @@
 * SAT20 资产发行和流通协议
   * [概述](introduce.md)
   * [背景](why.md)
-  * SAP 资产发行协议
+  * SIP 资产发行协议
     * [介绍](issuance/readme.md)
     * [指令](issuance/instruct.md)
     * [聪的编码：序号](issuance/ordinal.md)
@@ -16,7 +16,7 @@
       * [SFT](issuance/cases/SFT.md)
       * [DID](issuance/cases/DID.md)
       * [DIP](issuance/cases/DIP.md)
-  * SLP 资产流通协议
+  * SCP 资产流通协议
     * [概述](circulation/readme.md)
     * [聪锁定](circulation/satlock.md)
     * [聪映射](circulation/satmapping.md)
