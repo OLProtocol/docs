@@ -10,6 +10,7 @@
     * [聪的读写：铭刻](issuance/inscribe.md)
     * [资产发行模式](issuance/model.md)
     * [SAT20名字服务](issuance/SNS.md)
+    * [SAT20 D-Indexer](issuance/d-indexer.md)
     * [场景]
       * [FT](issuance/cases/FT.md)
       * [NFT](issuance/cases/NFT.md)
