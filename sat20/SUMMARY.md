@@ -9,8 +9,8 @@
     * [聪的编码：序号](issuance/ordinal.md)
     * [聪的读写：铭刻](issuance/inscribe.md)
     * [资产发行模式](issuance/model.md)
-    * [SAT20名字服务](issuance/SNS.md)
-    * [SAT20 D-Indexer](issuance/d-indexer.md)
+    * [名字服务](issuance/SNS.md)
+    * [D-Indexer](issuance/d-indexer.md)
     * [场景]
       * [FT](issuance/cases/FT.md)
       * [NFT](issuance/cases/NFT.md)
@@ -21,6 +21,7 @@
     * [概述](circulation/readme.md)
     * [聪锁定](circulation/satlock.md)
     * [聪映射](circulation/satmapping.md)
+    * [聪交换](circulation/satswap.md)
     * [增强型UTXO](circulation/enUTXO.md)
     * [客户端验证](circulation/CA.md)
     * [SVM](circulation/SVM.md)
