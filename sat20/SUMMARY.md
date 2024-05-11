@@ -9,6 +9,7 @@
     * [聪的编码：序号](issuance/ordinal.md)
     * [聪的读写：铭刻](issuance/inscribe.md)
     * [资产发行模式](issuance/model.md)
+    * [聪对象](issuance/SOB.md)
     * [名字服务](issuance/SNS.md)
     * [D-Indexer](issuance/d-indexer.md)
     * [场景]
