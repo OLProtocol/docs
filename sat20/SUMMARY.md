@@ -29,7 +29,7 @@
     * [场景]
       * [DEX](circulation/cases/sdex.md)
       * [MPC](circulation/cases/MPC.md)
-* [范例](sample.md)
-* [规划](roadmap.md)
+* [样本](sample.md)
+* [路线](roadmap.md)
 * [捐赠](donate.md)
 * [关于](about.md)
