@@ -29,6 +29,7 @@
     * [场景]
       * [DEX](circulation/cases/sdex.md)
       * [MPC](circulation/cases/MPC.md)
+      * [DePIN](circulation/cases/DePIN.md)
 * [样本](sample.md)
 * [路线](roadmap.md)
 * [捐赠](donate.md)
