@@ -1,7 +1,7 @@
-DIP
+DeIP
 ====
 
-基于BTC的去中心化网络，DIP（Decentralized Intellectual Property）具有以下基本属性：
+基于BTC的去中心化网络，DeIP（Decentralized Intellectual Property）具有以下基本属性：
 1. 去中心化性质：创作者提交在BTC网络上的作品，自动获得DIP。
 2. 知识产权保护：类似开源软件，学习和个人使用不用付费，收费的业务使用需要付费。
 3. 去中介化：通过智能合约、分布式账本或其他去中心化技术来实现DIP的授权、验证和管理。

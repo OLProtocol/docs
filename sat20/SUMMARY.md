@@ -17,7 +17,7 @@
       * [NFT](issuance/cases/NFT.md)
       * [SFT](issuance/cases/SFT.md)
       * [DID](issuance/cases/DID.md)
-      * [DIP](issuance/cases/DIP.md)
+      * [DeIP](issuance/cases/DeIP.md)
   * 资产流通协议
     * [概述](circulation/readme.md)
     * [聪锁定](circulation/satlock.md)
