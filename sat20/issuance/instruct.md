@@ -14,13 +14,14 @@ deploy
 | op | Yes | 指令: deploy |
 | tick | Yes | 名称: 只允许3或5-16个字符，（为brc-20保留4个字符） |
 | lim | No | 每次mint的token的限额，默认是10000。如果deploy特殊sat上的token，默认是1。 |
-| selfmint | No | 默认是false；设置为true，只有持有该ticker的地址才能铸造（父子铭文） |
-| block | No | 没有总量限制，但是有mint的开始高度和结束高度（开始-结束）。|
+| selfmint | No | 自己铸造的比例，只有持有该ticker的地址才能铸造（父子铭文）。设置了selfmint，必须设置max。 |
+| max | No | mint的总量，64位整数。 |
+| block | No | mint的开始高度和结束高度（开始-结束）。|
 | attr | No | sat的属性要求，比如"rar=uncommon;trz=8"，可扩展。 |
 | des | No | 描述内容 |
 
 
-例如：  
+例如，公平发射的ticker：  
 {   
   "p": "ordx",  
   "op": "deploy",  
@@ -28,6 +29,21 @@ deploy
   “block”: "830000-833144",  
   "lim": "10000"  
 }  
+
+或者，项目方控盘的ticker：  
+{   
+  "p": "ordx",  
+  "op": "deploy",  
+  "tick": "Gamever",  
+  "selfmint": "10%",  
+  "max": "1000000000",  
+  "lim": "10000"  
+}  
+
+部署ticker的规则：
+1. ticker必须没有被用过
+2. 考虑好发行模式，公平发射还是项目主导，设置好对应的参数
+
 
 attr是一个可以扩展的属性，目的是让越来越多特殊的sat可以通过这个属性被筛选出来。目前支持的属性有：
 1. rar：稀有度，在Ordinals中定义：common, uncommon, rare, epic, legendary, mythic 
@@ -57,7 +73,7 @@ mint
 每次mint时，需要做的通用检查：
 1. 协议必须是ordx
 2. op必须是mint
-3. tick必须已经部署过
+3. ticker必须已经部署过
 4. amt小于等于deploy的规则“lim”
 5. 如果有deploy的规则“selfmint”：只有持有ticker的地址才能mint（父子铭文）
 6. 如果有deploy的规则”block“：该次mint的block高度要在规定之内
