@@ -14,7 +14,7 @@ deploy
 | op | Yes | 指令: deploy |
 | tick | Yes | 名称: 只允许3或5-16个字符，（为brc-20保留4个字符） |
 | lim | No | 每次mint的token的限额，默认是10000。如果deploy特殊sat上的token，默认是1。 |
-| selfmint | No | 自己铸造的比例，只有持有该ticker的地址才能铸造（父子铭文）。 |
+| selfmint | No | 自己铸造的比例（两位小数），只有持有该ticker的地址才能铸造（父子铭文）。 |
 | max | No | mint的总量，64位整数。 |
 | block | No | mint的开始高度和结束高度（开始-结束）。|
 | attr | No | sat的属性要求，比如"rar=uncommon;trz=8"，可扩展。 |
@@ -41,7 +41,7 @@ deploy
 }  
 
 部署ticker的规则：
-1. ticker必须没有被用过
+1. ticker的名字必须没有被用过，或者部署着拥有该名字（DID）
 2. 如果有block参数，要求该deploy被确认的高度，必须比start高度大1000以上
 违背规则的ticker无效。
 
