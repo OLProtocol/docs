@@ -35,7 +35,7 @@ deploy
   "p": "ordx",  
   "op": "deploy",  
   "tick": "Gamever",  
-  "selfmint": "10%",  
+  "selfmint": "100%",  
   "max": "1000000000",  
   "lim": "10000"  
 }  
