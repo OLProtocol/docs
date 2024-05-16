@@ -13,3 +13,5 @@ SAT20的序数理论脱胎于Ordinals协议，但是跟Ordinals协议有原则�
 SAT20完全支持Ordinals NFT，主要原因是因为Ordinals NFT是一种绑定在聪上的资产，符合SAT20资产的定义，也就是说Ordinals NFT也是一种SAT20资产。
 
 （具体背景请参考github issue：https://github.com/ordinals/ord/issues/3690#issuecomment-2083950493 和 https://github.com/ordinals/ord/issues/3702#issuecomment-2081429205）
+
+（备注：ordinals理论现在已经有了正式的BIP编号，正式进入考察流程。Ordinals理论成为BTC标准的可能性非常的高。最终Ordinals理论使用的编码方案，都会成SAT20的编码方案。具体参考：https://github.com/bitcoin/bips/pull/1408 ）
