@@ -27,5 +27,6 @@
 * 常见问题
   * [如何判断一个Ordinals NFT是ordx资产](QA/failmint.md)
 * [规划](roadmap.md)
+* [API](https://apiprd.ordx.space/mainnet/swagger/index.html)
 * [捐赠](donate.md)
 * [关于](README.md)
